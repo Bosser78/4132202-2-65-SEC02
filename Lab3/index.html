@@ -1,5 +1,10 @@
 <html>
     <head>
+        <style>
+            .red{
+                color: red;
+            }
+        </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
     <body>
@@ -13,7 +18,9 @@
         </div>
         <div>
             <button id="btn2">SAVE</button>
+            <button id="btn3">color</button>
         </div>
+        <div id="div_form"></div>
     </body>
 </html>
 <script>
@@ -46,10 +53,13 @@ $(function(){
     $("#div1").text(num);
 
     $("#btn2").click(function(){
-        $(".in1").val("เต่า");
+        $(".in1").val("BRU");
     });
 
-  
+  $("#btn3").bind("click",()=>{
+    $("in1:even").toggleClass("red");
+  });
+  $("#div_form").load("./pages/from.html")
 
 
 });//jQuery Handle
